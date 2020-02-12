@@ -1,0 +1,11 @@
+/.idea
+/logs
+/log
+target
+/.DSstore
+gradle
+gralew
+/.g8
+/build.gradle
+sign_in.scala.html
+sign_in.css

@@ -1,0 +1,357 @@
+# Logfile created on 2019-09-09 19:04:54 +0900 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-09-09 19:04:54 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [26f190d2] Running /usr/bin/env mkdir -p /tmp as ec2-user@product.okuyamatakehiro.com
+ DEBUG [26f190d2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [76b6e33f] Running /usr/bin/env #<StringIO:0x00007f9790014b70> /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@product.okuyamatakehiro.com
+ DEBUG [76b6e33f] Command: /usr/bin/env #<StringIO:0x00007f9790014b70> /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [63b0d507] Running /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@product.okuyamatakehiro.com
+ DEBUG [63b0d507] Command: /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [f8a67bd9] Running /usr/bin/env git ls-remote https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git HEAD as ec2-user@product.okuyamatakehiro.com
+ DEBUG [f8a67bd9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git ls-remote https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git HEAD )
+  INFO [0f08d756] Running /usr/bin/env mkdir -p /var/www/okuyamaproductapi/shared /var/www/okuyamaproductapi/releases as ec2-user@product.okuyamatakehiro.com
+ DEBUG [0f08d756] Command: /usr/bin/env mkdir -p /var/www/okuyamaproductapi/shared /var/www/okuyamaproductapi/releases
+ DEBUG [8745b7be] Running [ -f /var/www/okuyamaproductapi/current/REVISION ] as ec2-user@product.okuyamatakehiro.com
+ DEBUG [8745b7be] Command: [ -f /var/www/okuyamaproductapi/current/REVISION ]
+ DEBUG [3a32b7c8] Running /usr/bin/env cat /var/www/okuyamaproductapi/current/REVISION 2>/dev/null as ec2-user@product.okuyamatakehiro.com
+ DEBUG [3a32b7c8] Command: /usr/bin/env cat /var/www/okuyamaproductapi/current/REVISION 2>/dev/null
+ DEBUG [cf37edc0] Running [ -f /var/www/okuyamaproductapi/repo/HEAD ] as ec2-user@product.okuyamatakehiro.com
+ DEBUG [cf37edc0] Command: [ -f /var/www/okuyamaproductapi/repo/HEAD ]
+  INFO The repository mirror is at /var/www/okuyamaproductapi/repo
+ DEBUG [4e8b1f72] Running if test ! -d /var/www/okuyamaproductapi/repo; then echo "Directory does not exist '/var/www/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@product.okuyamatakehiro.com
+ DEBUG [4e8b1f72] Command: if test ! -d /var/www/okuyamaproductapi/repo; then echo "Directory does not exist '/var/www/okuyamaproductapi/repo'" 1>&2; false; fi
+  INFO [01d67147] Running /usr/bin/env git remote set-url origin https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git as ec2-user@product.okuyamatakehiro.com
+ DEBUG [01d67147] Command: cd /var/www/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git remote set-url origin https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git )
+  INFO [6e688f91] Running /usr/bin/env git remote update --prune as ec2-user@product.okuyamatakehiro.com
+ DEBUG [6e688f91] Command: cd /var/www/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8d1780e4] Running if test ! -d /var/www/okuyamaproductapi/repo; then echo "Directory does not exist '/var/www/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@product.okuyamatakehiro.com
+ DEBUG [8d1780e4] Command: if test ! -d /var/www/okuyamaproductapi/repo; then echo "Directory does not exist '/var/www/okuyamaproductapi/repo'" 1>&2; false; fi
+  INFO [555936bf] Running /usr/bin/env mkdir -p /var/www/okuyamaproductapi/releases/20190909100454 as ec2-user@product.okuyamatakehiro.com
+ DEBUG [555936bf] Command: cd /var/www/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env mkdir -p /var/www/okuyamaproductapi/releases/20190909100454 )
+  INFO [caa31540] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/okuyamaproductapi/releases/20190909100454 as ec2-user@product.okuyamatakehiro.com
+ DEBUG [caa31540] Command: cd /var/www/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/okuyamaproductapi/releases/20190909100454 )
+ DEBUG [779d99df] Running if test ! -d /var/www/okuyamaproductapi/repo; then echo "Directory does not exist '/var/www/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@product.okuyamatakehiro.com
+ DEBUG [779d99df] Command: if test ! -d /var/www/okuyamaproductapi/repo; then echo "Directory does not exist '/var/www/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [b864692c] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@product.okuyamatakehiro.com
+ DEBUG [b864692c] Command: cd /var/www/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [126b95c2] Running if test ! -d /var/www/okuyamaproductapi/releases/20190909100454; then echo "Directory does not exist '/var/www/okuyamaproductapi/releases/20190909100454'" 1>&2; false; fi as ec2-user@product.okuyamatakehiro.com
+ DEBUG [126b95c2] Command: if test ! -d /var/www/okuyamaproductapi/releases/20190909100454; then echo "Directory does not exist '/var/www/okuyamaproductapi/releases/20190909100454'" 1>&2; false; fi
+  INFO [cff5d496] Running /usr/bin/env echo "" > REVISION as ec2-user@product.okuyamatakehiro.com
+ DEBUG [cff5d496] Command: cd /var/www/okuyamaproductapi/releases/20190909100454 && /usr/bin/env echo "" > REVISION
+  INFO [37d01573] Running /usr/bin/env ln -s /var/www/okuyamaproductapi/releases/20190909100454 /var/www/okuyamaproductapi/releases/current as ec2-user@product.okuyamatakehiro.com
+ DEBUG [37d01573] Command: /usr/bin/env ln -s /var/www/okuyamaproductapi/releases/20190909100454 /var/www/okuyamaproductapi/releases/current
+  INFO [5bb8eb5b] Running /usr/bin/env mv /var/www/okuyamaproductapi/releases/current /var/www/okuyamaproductapi as ec2-user@product.okuyamatakehiro.com
+ DEBUG [5bb8eb5b] Command: /usr/bin/env mv /var/www/okuyamaproductapi/releases/current /var/www/okuyamaproductapi
+ DEBUG [d6db6d86] Running /usr/bin/env ls -x /var/www/okuyamaproductapi/releases as ec2-user@product.okuyamatakehiro.com
+ DEBUG [d6db6d86] Command: /usr/bin/env ls -x /var/www/okuyamaproductapi/releases
+ DEBUG [57313ab9] Running if test ! -d /var/www/okuyamaproductapi/releases; then echo "Directory does not exist '/var/www/okuyamaproductapi/releases'" 1>&2; false; fi as ec2-user@product.okuyamatakehiro.com
+ DEBUG [57313ab9] Command: if test ! -d /var/www/okuyamaproductapi/releases; then echo "Directory does not exist '/var/www/okuyamaproductapi/releases'" 1>&2; false; fi
+  INFO [6046de12] Running /usr/bin/env echo "Branch master (at ) deployed as release 20190909100454 by okuyamatakehiro" >> /var/www/okuyamaproductapi/revisions.log as ec2-user@product.okuyamatakehiro.com
+ DEBUG [6046de12] Command: cd /var/www/okuyamaproductapi/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20190909100454 by okuyamatakehiro" >> /var/www/okuyamaproductapi/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-09-11 14:25:30 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [915ba067] Running /usr/bin/env mkdir -p /tmp as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [915ba067] Command: /usr/bin/env mkdir -p /tmp
+  INFO [915ba067] Finished in 0.376 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 0.0%
+  INFO Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 100.0%
+  INFO [ff40b3b3] Running /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [ff40b3b3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [ff40b3b3] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [9702ffb0] Running /usr/bin/env git ls-remote https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git HEAD as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [9702ffb0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git ls-remote https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git HEAD )
+ DEBUG [9702ffb0] 	remote: Invalid username or password
+fatal: Authentication failed for 'https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git/'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-09-11 14:38:40 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [151c5674] Running /usr/bin/env mkdir -p /tmp as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [151c5674] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-09-11 14:40:45 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [91271541] Running /usr/bin/env mkdir -p /tmp as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [91271541] Command: /usr/bin/env mkdir -p /tmp
+  INFO [91271541] Finished in 0.297 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 0.0%
+  INFO Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 100.0%
+  INFO [cbab9dca] Running /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [cbab9dca] Command: /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [cbab9dca] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [b337183b] Running /usr/bin/env git ls-remote https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git HEAD as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [b337183b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git ls-remote https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git HEAD )
+ DEBUG [b337183b] 	remote: Invalid username or password
+fatal: Authentication failed for 'https://okuyamatakehiro@bitbucket.org/teamlabengineering/okuyama_itemapi.git/'
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-09-11 14:53:51 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [cb431bc0] Running /usr/bin/env mkdir -p /tmp as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [cb431bc0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [cb431bc0] Finished in 0.337 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 0.0%
+  INFO Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 100.0%
+  INFO [71ea3558] Running /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [71ea3558] Command: /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [71ea3558] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [216dfac7] Running /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [216dfac7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD )
+ DEBUG [216dfac7] 	44dad97b833d8addff7092f3ad0f8473bebadd3a	HEAD
+  INFO [216dfac7] Finished in 2.131 seconds with exit status 0 (successful).
+  INFO [c134079c] Running /usr/bin/env mkdir -p /var/www/okuyamaproductapi/shared /var/www/okuyamaproductapi/releases as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [c134079c] Command: /usr/bin/env mkdir -p /var/www/okuyamaproductapi/shared /var/www/okuyamaproductapi/releases
+ DEBUG [c134079c] 	mkdir: ディレクトリ `/var/www' を作成できません: Permission denied
+ DEBUG [c134079c] 	mkdir: ディレクトリ `/var/www' を作成できません: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-09-11 15:09:49 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c49e7471] Running /usr/bin/env mkdir -p /tmp as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [c49e7471] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c49e7471] Finished in 0.648 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 0.0%
+  INFO Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 100.0%
+  INFO [94dc04c7] Running /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [94dc04c7] Command: /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [94dc04c7] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [bd1401b4] Running /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [bd1401b4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD )
+ DEBUG [bd1401b4] 	44dad97b833d8addff7092f3ad0f8473bebadd3a	HEAD
+  INFO [bd1401b4] Finished in 2.184 seconds with exit status 0 (successful).
+  INFO [db1bea36] Running /usr/bin/env mkdir -p /var/www/okuyamaproductapi/shared /var/www/okuyamaproductapi/releases as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [db1bea36] Command: /usr/bin/env mkdir -p /var/www/okuyamaproductapi/shared /var/www/okuyamaproductapi/releases
+ DEBUG [db1bea36] 	mkdir: ディレクトリ `/var/www' を作成できません: Permission denied
+ DEBUG [db1bea36] 	mkdir: ディレクトリ `/var/www' を作成できません: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-09-11 15:26:22 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a618b63a] Running /usr/bin/env mkdir -p /tmp as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [a618b63a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a618b63a] Finished in 0.281 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 0.0%
+  INFO Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 100.0%
+  INFO [956f8e2c] Running /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [956f8e2c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [956f8e2c] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [ef9db191] Running /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [ef9db191] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD )
+ DEBUG [ef9db191] 	44dad97b833d8addff7092f3ad0f8473bebadd3a	HEAD
+  INFO [ef9db191] Finished in 2.105 seconds with exit status 0 (successful).
+  INFO [825c2c21] Running /usr/bin/env mkdir -p ~/okuyamaproductapi/shared ~/okuyamaproductapi/releases as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [825c2c21] Command: /usr/bin/env mkdir -p ~/okuyamaproductapi/shared ~/okuyamaproductapi/releases
+  INFO [825c2c21] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [0dd5f594] Running [ -f ~/okuyamaproductapi/current/REVISION ] as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [0dd5f594] Command: [ -f ~/okuyamaproductapi/current/REVISION ]
+ DEBUG [0dd5f594] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [cea5dd57] Running [ -f ~/okuyamaproductapi/repo/HEAD ] as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [cea5dd57] Command: [ -f ~/okuyamaproductapi/repo/HEAD ]
+ DEBUG [cea5dd57] Finished in 0.101 seconds with exit status 1 (failed).
+ DEBUG [56184084] Running if test ! -d ~/okuyamaproductapi; then echo "Directory does not exist '~/okuyamaproductapi'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [56184084] Command: if test ! -d ~/okuyamaproductapi; then echo "Directory does not exist '~/okuyamaproductapi'" 1>&2; false; fi
+ DEBUG [56184084] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [7b93016f] Running /usr/bin/env git clone --mirror git@bitbucket.org:teamlabengineering/okuyama_itemapi.git ~/okuyamaproductapi/repo as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [7b93016f] Command: cd ~/okuyamaproductapi && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git clone --mirror git@bitbucket.org:teamlabengineering/okuyama_itemapi.git ~/okuyamaproductapi/repo )
+ DEBUG [7b93016f] 	Cloning into bare repository '/home/ec2-user/okuyamaproductapi/repo'...
+  INFO [7b93016f] Finished in 10.547 seconds with exit status 0 (successful).
+ DEBUG [9d50364c] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [9d50364c] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [9d50364c] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [4cfc3196] Running /usr/bin/env git remote set-url origin git@bitbucket.org:teamlabengineering/okuyama_itemapi.git as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [4cfc3196] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git remote set-url origin git@bitbucket.org:teamlabengineering/okuyama_itemapi.git )
+  INFO [4cfc3196] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [97f97f4a] Running /usr/bin/env git remote update --prune as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [97f97f4a] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [97f97f4a] 	Fetching origin
+  INFO [97f97f4a] Finished in 2.150 seconds with exit status 0 (successful).
+ DEBUG [412e2be8] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [412e2be8] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [412e2be8] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [11634454] Running /usr/bin/env mkdir -p ~/okuyamaproductapi/releases/20190911062625 as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [11634454] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env mkdir -p ~/okuyamaproductapi/releases/20190911062625 )
+  INFO [11634454] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [8398497a] Running /usr/bin/env git archive deployByCapistrano | /usr/bin/env tar -x -f - -C ~/okuyamaproductapi/releases/20190911062625 as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [8398497a] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git archive deployByCapistrano | /usr/bin/env tar -x -f - -C ~/okuyamaproductapi/releases/20190911062625 )
+  INFO [8398497a] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [b2da3695] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [b2da3695] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [b2da3695] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [9d9d84f8] Running /usr/bin/env git rev-list --max-count=1 deployByCapistrano as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [9d9d84f8] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git rev-list --max-count=1 deployByCapistrano )
+ DEBUG [9d9d84f8] 	28b76f80501b6086cb9ff02f1cf8392f63c7af34
+ DEBUG [9d9d84f8] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG [99becbf1] Running if test ! -d ~/okuyamaproductapi/releases/20190911062625; then echo "Directory does not exist '~/okuyamaproductapi/releases/20190911062625'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [99becbf1] Command: if test ! -d ~/okuyamaproductapi/releases/20190911062625; then echo "Directory does not exist '~/okuyamaproductapi/releases/20190911062625'" 1>&2; false; fi
+ DEBUG [99becbf1] Finished in 0.103 seconds with exit status 0 (successful).
+  INFO [6f238d36] Running /usr/bin/env echo "28b76f80501b6086cb9ff02f1cf8392f63c7af34" > REVISION as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [6f238d36] Command: cd ~/okuyamaproductapi/releases/20190911062625 && /usr/bin/env echo "28b76f80501b6086cb9ff02f1cf8392f63c7af34" > REVISION
+  INFO [6f238d36] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [3c4df97b] Running /usr/bin/env ln -s ~/okuyamaproductapi/releases/20190911062625 ~/okuyamaproductapi/releases/current as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [3c4df97b] Command: /usr/bin/env ln -s ~/okuyamaproductapi/releases/20190911062625 ~/okuyamaproductapi/releases/current
+  INFO [3c4df97b] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [03ce1f04] Running /usr/bin/env mv ~/okuyamaproductapi/releases/current ~/okuyamaproductapi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [03ce1f04] Command: /usr/bin/env mv ~/okuyamaproductapi/releases/current ~/okuyamaproductapi
+  INFO [03ce1f04] Finished in 0.101 seconds with exit status 0 (successful).
+ DEBUG [c0c0abaa] Running /usr/bin/env ls -x ~/okuyamaproductapi/releases as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [c0c0abaa] Command: /usr/bin/env ls -x ~/okuyamaproductapi/releases
+ DEBUG [c0c0abaa] 	20190911062625
+ DEBUG [c0c0abaa] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [495a9185] Running if test ! -d ~/okuyamaproductapi/releases; then echo "Directory does not exist '~/okuyamaproductapi/releases'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [495a9185] Command: if test ! -d ~/okuyamaproductapi/releases; then echo "Directory does not exist '~/okuyamaproductapi/releases'" 1>&2; false; fi
+ DEBUG [495a9185] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [63c0a59d] Running /usr/bin/env echo "Branch deployByCapistrano (at 28b76f80501b6086cb9ff02f1cf8392f63c7af34) deployed as release 20190911062625 by okuyamatakehiro" >> ~/okuyamaproductapi/revisions.log as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [63c0a59d] Command: cd ~/okuyamaproductapi/releases && /usr/bin/env echo "Branch deployByCapistrano (at 28b76f80501b6086cb9ff02f1cf8392f63c7af34) deployed as release 20190911062625 by okuyamatakehiro" >> ~/okuyamaproductapi/revisions.log
+  INFO [63c0a59d] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-12-18 19:09:09 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b09792f2] Running /usr/bin/env mkdir -p /tmp as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [b09792f2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b09792f2] Finished in 0.331 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 0.0%
+  INFO Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 100.0%
+  INFO [a034e932] Running /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [a034e932] Command: /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [a034e932] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [288fc279] Running /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [288fc279] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD )
+ DEBUG [288fc279] 	44dad97b833d8addff7092f3ad0f8473bebadd3a	HEAD
+  INFO [288fc279] Finished in 2.272 seconds with exit status 0 (successful).
+  INFO [80c6d04e] Running /usr/bin/env mkdir -p ~/okuyamaproductapi/shared ~/okuyamaproductapi/releases as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [80c6d04e] Command: /usr/bin/env mkdir -p ~/okuyamaproductapi/shared ~/okuyamaproductapi/releases
+  INFO [80c6d04e] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [2b94b765] Running [ -f ~/okuyamaproductapi/current/REVISION ] as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [2b94b765] Command: [ -f ~/okuyamaproductapi/current/REVISION ]
+ DEBUG [2b94b765] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [a4e674b5] Running /usr/bin/env cat ~/okuyamaproductapi/current/REVISION 2>/dev/null as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [a4e674b5] Command: /usr/bin/env cat ~/okuyamaproductapi/current/REVISION 2>/dev/null
+ DEBUG [a4e674b5] 	28b76f80501b6086cb9ff02f1cf8392f63c7af34
+ DEBUG [a4e674b5] Finished in 0.145 seconds with exit status 0 (successful).
+ DEBUG [dd535242] Running [ -f ~/okuyamaproductapi/repo/HEAD ] as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [dd535242] Command: [ -f ~/okuyamaproductapi/repo/HEAD ]
+ DEBUG [dd535242] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO The repository mirror is at ~/okuyamaproductapi/repo
+ DEBUG [cbb2ab4a] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [cbb2ab4a] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [cbb2ab4a] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [1f7fe1af] Running /usr/bin/env git remote set-url origin git@bitbucket.org:teamlabengineering/okuyama_itemapi.git as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [1f7fe1af] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git remote set-url origin git@bitbucket.org:teamlabengineering/okuyama_itemapi.git )
+  INFO [1f7fe1af] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [ab8b49c9] Running /usr/bin/env git remote update --prune as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [ab8b49c9] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ab8b49c9] 	Fetching origin
+  INFO [ab8b49c9] Finished in 2.165 seconds with exit status 0 (successful).
+ DEBUG [6fa97546] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [6fa97546] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [6fa97546] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [a9cd7c3f] Running /usr/bin/env mkdir -p ~/okuyamaproductapi/releases/20191218100912 as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [a9cd7c3f] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env mkdir -p ~/okuyamaproductapi/releases/20191218100912 )
+  INFO [a9cd7c3f] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [b0e133cb] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/okuyamaproductapi/releases/20191218100912 as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [b0e133cb] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/okuyamaproductapi/releases/20191218100912 )
+  INFO [b0e133cb] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [f49f4d21] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [f49f4d21] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [f49f4d21] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [9316e220] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [9316e220] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9316e220] 	44dad97b833d8addff7092f3ad0f8473bebadd3a
+ DEBUG [9316e220] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [cfa9b63e] Running if test ! -d ~/okuyamaproductapi/releases/20191218100912; then echo "Directory does not exist '~/okuyamaproductapi/releases/20191218100912'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [cfa9b63e] Command: if test ! -d ~/okuyamaproductapi/releases/20191218100912; then echo "Directory does not exist '~/okuyamaproductapi/releases/20191218100912'" 1>&2; false; fi
+ DEBUG [cfa9b63e] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [4e07970b] Running /usr/bin/env echo "44dad97b833d8addff7092f3ad0f8473bebadd3a" > REVISION as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [4e07970b] Command: cd ~/okuyamaproductapi/releases/20191218100912 && /usr/bin/env echo "44dad97b833d8addff7092f3ad0f8473bebadd3a" > REVISION
+  INFO [4e07970b] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [750ff580] Running /usr/bin/env ln -s ~/okuyamaproductapi/releases/20191218100912 ~/okuyamaproductapi/releases/current as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [750ff580] Command: /usr/bin/env ln -s ~/okuyamaproductapi/releases/20191218100912 ~/okuyamaproductapi/releases/current
+  INFO [750ff580] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [20f328fa] Running /usr/bin/env mv ~/okuyamaproductapi/releases/current ~/okuyamaproductapi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [20f328fa] Command: /usr/bin/env mv ~/okuyamaproductapi/releases/current ~/okuyamaproductapi
+  INFO [20f328fa] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [3f0eecb1] Running /usr/bin/env ls -x ~/okuyamaproductapi/releases as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [3f0eecb1] Command: /usr/bin/env ls -x ~/okuyamaproductapi/releases
+ DEBUG [3f0eecb1] 	20190911062625	20191218100912
+ DEBUG [3f0eecb1] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [02818ae4] Running if test ! -d ~/okuyamaproductapi/releases; then echo "Directory does not exist '~/okuyamaproductapi/releases'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [02818ae4] Command: if test ! -d ~/okuyamaproductapi/releases; then echo "Directory does not exist '~/okuyamaproductapi/releases'" 1>&2; false; fi
+ DEBUG [02818ae4] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [9f3c6ad7] Running /usr/bin/env echo "Branch master (at 44dad97b833d8addff7092f3ad0f8473bebadd3a) deployed as release 20191218100912 by okuyamatakehiro" >> ~/okuyamaproductapi/revisions.log as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [9f3c6ad7] Command: cd ~/okuyamaproductapi/releases && /usr/bin/env echo "Branch master (at 44dad97b833d8addff7092f3ad0f8473bebadd3a) deployed as release 20191218100912 by okuyamatakehiro" >> ~/okuyamaproductapi/revisions.log
+  INFO [9f3c6ad7] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-12-18 19:55:16 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c4388eed] Running /usr/bin/env mkdir -p /tmp as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [c4388eed] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c4388eed] Finished in 0.267 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 0.0%
+  INFO Uploading /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh 100.0%
+  INFO [afb8bf1a] Running /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [afb8bf1a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh
+  INFO [afb8bf1a] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [17de8e02] Running /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [17de8e02] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git ls-remote git@bitbucket.org:teamlabengineering/okuyama_itemapi.git HEAD )
+ DEBUG [17de8e02] 	44dad97b833d8addff7092f3ad0f8473bebadd3a	HEAD
+  INFO [17de8e02] Finished in 4.797 seconds with exit status 0 (successful).
+  INFO [01d6cfa4] Running /usr/bin/env mkdir -p ~/okuyamaproductapi/shared ~/okuyamaproductapi/releases as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [01d6cfa4] Command: /usr/bin/env mkdir -p ~/okuyamaproductapi/shared ~/okuyamaproductapi/releases
+  INFO [01d6cfa4] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [e5e99aa7] Running [ -f ~/okuyamaproductapi/current/REVISION ] as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [e5e99aa7] Command: [ -f ~/okuyamaproductapi/current/REVISION ]
+ DEBUG [e5e99aa7] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [1cef56ca] Running /usr/bin/env cat ~/okuyamaproductapi/current/REVISION 2>/dev/null as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [1cef56ca] Command: /usr/bin/env cat ~/okuyamaproductapi/current/REVISION 2>/dev/null
+ DEBUG [1cef56ca] 	44dad97b833d8addff7092f3ad0f8473bebadd3a
+ DEBUG [1cef56ca] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG [1c7763a7] Running [ -f ~/okuyamaproductapi/repo/HEAD ] as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [1c7763a7] Command: [ -f ~/okuyamaproductapi/repo/HEAD ]
+ DEBUG [1c7763a7] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO The repository mirror is at ~/okuyamaproductapi/repo
+ DEBUG [a04874de] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [a04874de] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [a04874de] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [293d9357] Running /usr/bin/env git remote set-url origin git@bitbucket.org:teamlabengineering/okuyama_itemapi.git as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [293d9357] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git remote set-url origin git@bitbucket.org:teamlabengineering/okuyama_itemapi.git )
+  INFO [293d9357] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [06b37379] Running /usr/bin/env git remote update --prune as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [06b37379] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [06b37379] 	Fetching origin
+  INFO [06b37379] Finished in 2.683 seconds with exit status 0 (successful).
+ DEBUG [306202de] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [306202de] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [306202de] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [cc9b6842] Running /usr/bin/env mkdir -p ~/okuyamaproductapi/releases/20191218105522 as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [cc9b6842] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env mkdir -p ~/okuyamaproductapi/releases/20191218105522 )
+  INFO [cc9b6842] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [b48a2dd6] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/okuyamaproductapi/releases/20191218105522 as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [b48a2dd6] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C ~/okuyamaproductapi/releases/20191218105522 )
+  INFO [b48a2dd6] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [999d19a2] Running if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [999d19a2] Command: if test ! -d ~/okuyamaproductapi/repo; then echo "Directory does not exist '~/okuyamaproductapi/repo'" 1>&2; false; fi
+ DEBUG [999d19a2] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [866c596d] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [866c596d] Command: cd ~/okuyamaproductapi/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-okuyamaproductapi-production-okuyamatakehiro.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [866c596d] 	44dad97b833d8addff7092f3ad0f8473bebadd3a
+ DEBUG [866c596d] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [b515945d] Running if test ! -d ~/okuyamaproductapi/releases/20191218105522; then echo "Directory does not exist '~/okuyamaproductapi/releases/20191218105522'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [b515945d] Command: if test ! -d ~/okuyamaproductapi/releases/20191218105522; then echo "Directory does not exist '~/okuyamaproductapi/releases/20191218105522'" 1>&2; false; fi
+ DEBUG [b515945d] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [dcc75567] Running /usr/bin/env echo "44dad97b833d8addff7092f3ad0f8473bebadd3a" > REVISION as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [dcc75567] Command: cd ~/okuyamaproductapi/releases/20191218105522 && /usr/bin/env echo "44dad97b833d8addff7092f3ad0f8473bebadd3a" > REVISION
+  INFO [dcc75567] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [bec882a3] Running /usr/bin/env ln -s ~/okuyamaproductapi/releases/20191218105522 ~/okuyamaproductapi/releases/current as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [bec882a3] Command: /usr/bin/env ln -s ~/okuyamaproductapi/releases/20191218105522 ~/okuyamaproductapi/releases/current
+  INFO [bec882a3] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [c71a77be] Running /usr/bin/env mv ~/okuyamaproductapi/releases/current ~/okuyamaproductapi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [c71a77be] Command: /usr/bin/env mv ~/okuyamaproductapi/releases/current ~/okuyamaproductapi
+  INFO [c71a77be] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [2fc7a38a] Running /usr/bin/env ls -x ~/okuyamaproductapi/releases as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [2fc7a38a] Command: /usr/bin/env ls -x ~/okuyamaproductapi/releases
+ DEBUG [2fc7a38a] 	20190911062625	20191218100912	20191218105522
+ DEBUG [2fc7a38a] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [e987bd75] Running if test ! -d ~/okuyamaproductapi/releases; then echo "Directory does not exist '~/okuyamaproductapi/releases'" 1>&2; false; fi as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [e987bd75] Command: if test ! -d ~/okuyamaproductapi/releases; then echo "Directory does not exist '~/okuyamaproductapi/releases'" 1>&2; false; fi
+ DEBUG [e987bd75] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [56c87242] Running /usr/bin/env echo "Branch master (at 44dad97b833d8addff7092f3ad0f8473bebadd3a) deployed as release 20191218105522 by okuyamatakehiro" >> ~/okuyamaproductapi/revisions.log as ec2-user@ec2-3-115-73-2.ap-northeast-1.compute.amazonaws.com
+ DEBUG [56c87242] Command: cd ~/okuyamaproductapi/releases && /usr/bin/env echo "Branch master (at 44dad97b833d8addff7092f3ad0f8473bebadd3a) deployed as release 20191218105522 by okuyamatakehiro" >> ~/okuyamaproductapi/revisions.log
+  INFO [56c87242] Finished in 0.075 seconds with exit status 0 (successful).

@@ -1,0 +1,40 @@
+.header {
+    height: 80px;
+    background-color: aqua;
+}
+
+.sign_in_content {
+    width: 800px;
+    margin: 50px auto;
+    background-color: antiquewhite;
+}
+
+.sign_in_title {
+    height: 100px;
+    background-color: darkred;
+}
+
+.sign_in_name {
+    height: 100px;
+    background-color: black;
+}
+
+.sign_in_email {
+    height: 100px;
+    background-color: darkred;
+}
+
+.sign_in_password {
+    height: 100px;
+    background-color: black;
+}
+
+.sign_in_password_confirmation {
+    height: 100px;
+    background-color: darkred;
+}
+
+.sign_in_submit {
+    height: 100px;
+    background-color: black;
+}

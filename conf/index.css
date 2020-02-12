@@ -1,0 +1,17 @@
+.login_wrapper {
+    height: 100vh;
+    background-color: darkgrey;
+}
+
+.login_title {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: solid;
+    height: 300px;
+}
+
+.login_error_title {
+    color: black;
+    font-weight: bold;
+}
