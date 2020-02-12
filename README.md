@@ -256,28 +256,9 @@ mysql.server start
 sbt ~run
 ````
 
-## AWSサーバー設計
-### VPC
-| VPC名 | CIDR | 
-| :--- : | :---: | 
-| VPC-Shared | 192.168.0.0/16 |
-
-### サブネット
-| Name | CIDR | AvailabilityZone | 用途 | 
-| :--- : | :---: | :---: | :---: |
-| okuyama-public-1c | 192.168.18.32/27 | ap-northeast-1c | webサーバー |
-
-### EC2インスタンス
-| Name | インスタンスタイプ | AvailabilityZone | サブネット | セキュリティーグループ |
-| :--- : | :---: | :---: | :---: | :---: |
-| okuyama-app3 | t2.micro | ap-northeast-1c | okuyama-public-1c | app-security-group |
-
 * インフラ構成図  
 https://drive.google.com/file/d/14WvHx45BYPMB-EIg4UqyyLek7xW_LbFU/view?usp=sharing
 
-* 商品管理APIトークン取得画面  
-http://ec2-13-113-213-181.ap-northeast-1.compute.amazonaws.com:9000
-* フロント  
-http://ec2-13-113-213-181.ap-northeast-1.compute.amazonaws.com:3000
+
 
 
