@@ -1,10 +1,10 @@
-##使用した技術要素
+## 使用した技術要素
 * java 1.8.0_172
 * play 2.6.16
 * sbt
 * mysql 5.7
 
-##テーブル定義
+## テーブル定義
 | カラム名    | 型             |   NULL   |   KEY      |   その他 |
 | :--------: | :-----------: | :------: | :--------: | -------- |
 | id         | Long          |          |PRI         |          |
@@ -13,7 +13,7 @@
 | introduction | mediumText  |          |            |          |
 | price      | integer       |          |            |          |
 
-##機能一覧
+## 機能一覧
 | 機能名        | HTTPメソッド    | リソースパス       |
 | :----------:  | :------------: | :----------:    |
 | 商品登録       | POST           | /products       |
@@ -21,14 +21,14 @@
 | 商品削除       | DELETE         | /products/:id   |
 | 商品検索       | PUT            | /search/products |
 
-##API設計
+## API設計
 
-####認証機能付のAPI
+#### 認証機能付のAPI
 トークン認証機能付のAPIとなっているため、APIにリクエストを送信する際にヘッダーにアクセストークンを持たせる必要がある。  
 アクセストークンはログイン時に遷移するページに表示される。  
 ヘッダー名は`token`とする。
 
-####商品の登録
+#### 商品の登録
 * Request  
 `POST /items`
 
@@ -64,7 +64,7 @@
 }
 ````
 
-####商品の更新
+#### 商品の更新
 * Request  
 `PUT /products/:id`
 * Parameters
@@ -95,7 +95,7 @@
 }
 ````
 
-####商品の削除
+#### 商品の削除
 * Request  
 `DELETE /products/:id`
 
@@ -106,7 +106,7 @@
 }
 ````
 
-####商品の検索
+#### 商品の検索
 * Request  
 `POST /search/products`
 
@@ -140,7 +140,7 @@
 
 ````
 
-##ログイン・ログアウト機能
+## ログイン・ログアウト機能
 TwitterのOAuth認証を利用  
 application.confにTwitterから取得したAPI　keysを記述することで利用可能  
 
@@ -149,7 +149,7 @@ consumerKey = ""
 consumerSecretKey = ""
 ````
 
-####機能を利用する際のURLについて
+#### 機能を利用する際のURLについて
 ローカル開発環境で動作確認をする場合はホスト名を「127.0.0.1:9000」とすること、「localhost」はTwitter側が受け付けない
 
 * ログイン画面  
@@ -166,8 +166,8 @@ URL
 `/signout`
 
 
-##開発環境のセットアップ手順  
-######※macOSの場合の手順
+## 開発環境のセットアップ手順  
+###### ※macOSの場合の手順
 * HomeBrewインストール
 ```aidl
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -237,7 +237,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION
 max_allowed_packet=32MB
 
 ```
-##起動までの手順  
+## 起動までの手順  
 * gitのリモートリポジトリをクローン
 ````
 git clone git@bitbucket.org:teamlabengineering/okuyama_itemapi.git
@@ -256,8 +256,8 @@ mysql.server start
 sbt ~run
 ````
 
-##AWSサーバー設計
-###VPC
+## AWSサーバー設計
+### VPC
 | VPC名 | CIDR | 
 | :--- : | :---: | 
 | VPC-Shared | 192.168.0.0/16 |
